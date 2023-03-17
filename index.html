@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<style>
+      body {
+       margin:0;
+	   padding:0;
+	   background-color:#000;
+	   color:#fff;
+	   font-family: 'Roboto', sans-serif;
+	   font-weight:300;
+      }
+	  body::-webkit-scrollbar{
+		width:2px;
+		background-color:#cccccc;
+	}
+	body::-webkit-scrollbar:horizontal{
+		height:2px;
+	}
+	body::-webkit-scrollbar-track{
+		border:1px #787878 solid;
+		border-radius:2px;
+		-webkit-box-shadow:0 0 6px #c8c8c8 inset;
+	}
+	body::-webkit-scrollbar-thumb{
+		background-color:#eb6e05;
+		border:1px solid #eb6e05;
+		border-radius:2px;
+	}
+	body::-webkit-scrollbar-thumb:hover{
+		background-color:#eb6e05;
+		border:1px solid #eb6e05;
+	}
+	body::-webkit-scrollbar-thumb:active{
+		background-color:#eb6e05;
+		border:1px solid #eb6e05;
+	}
+	  .fwidth{background-color:#17181e;width:100%;height:auto;padding:0;margin:0;}
+	  .fleft{width:50%;margin:0;padding:0;float:left;}
+	  .fright{width:50%;margin:0;padding:0;float:right;text-align:right;}
+	  .logoTop{width:90%;height:audio;margin:5px;}
+	  .textalignLeft{text-align:left;}
+	  .textalignCenter{text-align:center;}
+	  .pro{font-size:22px;line-height:44px;border-left: 1px solid #393b48;width:49%;}
+	  .pro span{margin-left:15px;}
+	  .SELBUY{font-weight: 700;
+    font-size: 14px;
+    line-height: 44px;
+    text-align: left;
+    width: auto;
+    float: right;
+    margin-left: 1px;
+    color: #ffffff;
+    /* border: 1px solid #1f73b2; */
+    padding: 0 10px 0 10px;
+    background-color: #1f73b2;}
+	  .usermenu{list-style:none;padding:0;margin:0;}
+	  .usermenu li{float:left;line-height:44px;text-align:right;padding:0 20px 0 19px;border-left: 1px solid #000;}
+	  .usermenu li a{color:#fff;font-size:14px;text-decoration:none;}
+	  .usermenu li a i{margin-right:5px;color: #eb6e05;}
+	  .twidth{background-color:#17181e;width:100%;height:auto;padding:5px 0 5px 0;margin:4px auto;}
+	.coindetail{list-style:none;padding:0;margin:0;}
+	.coindetail li{float:left;padding:0;margin:0;width:11.1111111111%;}
+	.width100{width:100%;display:block;height:audio;}
+	.cointop{font-size:13px;font-weight:900;}
+	.cointoptext{font-size:11px;font-weight:700;color:#eb6e05;}
+	.textalignright{text-align:right;}
+	.paddingleft5{padding-left:5px;}
+	.paddingright5{padding-right:5px;}
+	.fwidthnotcolot{width:100%;height:auto;padding:0;margin:0;}
+	.UIMaster{list-style:none;padding:0;margin:0;}
+	.UIMaster li{float:left;margin:0;padding:0;height:auto;}
+	.width50{width:50%;}
+	.width25{width:25%;}
+	.width99{width:99%;}
+	.width995{width:99.5%;height:369px;}
+	.centertools{width:100%;height:auto;padding:5px;box-sizing: border-box;display:flex;}
+	.padding5px{}
+	.searchBox,.favori{width:100%;padding:5px;-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;border:1px #eb6e05 solid;background-color: #25262c;}
+.searchBox{color:#fff;}
+.inputdiv{width:80%;padding:5px;border:1px #eb6e05 solid;background-color: #25262c;-webkit-border-top-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;font-size:12px;text-align:right;position:relative;}
+.inputcaption{
+    position: absolute;
+    left: 7px;
+    top: -6px;
+    font-size: 9px;
+    background-color: #25262c;
+    color: #fff;
+    padding: 2px;
+}
+.inputdivupdown{width:20%;padding:5px;border:1px #eb6e05 solid;background-color: #25262c;
+-webkit-border-top-right-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+-moz-border-radius-topright: 5px;
+-moz-border-radius-bottomright: 5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;font-size:12px;border-left:0;position:relative;
+}
+.updownabsolite{position:absolute;right:5px;top:1px;}
+
+
+.favori i{font-size: 14px;cursor:pointer;
+    color: #626470;}
+	.cointype{width:100%;height:auto;padding:5px;box-sizing: border-box;}
+	.cointypelist{width:auto;padding:5px;-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;border:1px #1f73b2 solid;background-color: #25262c;display:flex;}
+.cointypelisttext{border-right:1px solid #5c5e68;font-size:12px;color:#fff;width:100%;text-align:center;}
+.cointypelisttext:last-child{border:0;}
+.cointypealttext{font-size:12px;width:100%;color:#6a6a6a;}
+.cointypealttext:hover{color:#eb6e05;cursor:pointer;}
+.cointypelisttext:hover{color:#eb6e05;cursor:pointer;}
+.downhover:hover{color:rgb(246, 70, 93) !important}
+.uphover:hover{color:rgb(14, 203, 129) !important}
+.aktif{color:#eb6e05;font-weight:400;}
+.cointypealt{width:auto;padding:5px;display:flex;border-bottom:1px solid #5c5e68;}
+.coinlisttop{width:auto;padding:0;display:flex;cursor:pointer;}
+.coinlisttop:hover{opacity:0.8;}
+.maxwidth42{width:42%;}
+.maxwidth36{width: 36%;
+    text-align: right;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;}
+.maxwidth22{width:22%;text-align:right;display:flex;align-items: flex-start;
+    justify-content: flex-end;}
+.fontsize12{font-size:13px;font-weight:400;}
+.fontsize12b{font-size:13px;font-weight:400;}
+.isize12px{font-size:12px;color:#6a6a6a;cursor:pointer;}
+.isize12px:hover{color:#eb6e05;cursor:pointer;}
+.absoluteleft5{position:absolute;left:5px;top:8px;}
+.iblock{display:block;line-height:5px;font-size: 11px;
+    color: #6a6a6a;}
+.iblock:hover{color:#eb6e05;cursor:pointer;}
+.iblockAktif{color:#eb6e05;}
+.symbolstyle{font-size:11px;}
+.symbolstyle span{color:rgb(132, 142, 156);}
+.symbolstyle i{color:rgb(132, 142, 156);}
+.down{color:rgb(246, 70, 93);}
+.up{color:rgb(14, 203, 129);}
+.margintop2px{margin-top:2px;}
+.scrollbar {
+		
+		height:231px;
+		overflow-y:scroll;
+}
+.scrollbar150 {
+		
+		height:150px;
+		overflow-y:scroll;
+}
+.scrollbar147{
+		height:146px;
+		overflow-y:scroll;
+}
+.scrollbar-custom::-webkit-scrollbar{
+		width:2px;
+		background-color:#cccccc;
+	}
+	.scrollbar-custom::-webkit-scrollbar:horizontal{
+		height:2px;
+	}
+	.scrollbar-custom::-webkit-scrollbar-track{
+		border:1px #787878 solid;
+		border-radius:2px;
+		-webkit-box-shadow:0 0 6px #c8c8c8 inset;
+	}
+	.scrollbar-custom::-webkit-scrollbar-thumb{
+		background-color:#eb6e05;
+		border:1px solid #eb6e05;
+		border-radius:2px;
+	}
+	.scrollbar-custom::-webkit-scrollbar-thumb:hover{
+		background-color:#eb6e05;
+		border:1px solid #eb6e05;
+	}
+	.scrollbar-custom::-webkit-scrollbar-thumb:active{
+		background-color:#eb6e05;
+		border:1px solid #eb6e05;
+	}
+	.borderbottomblue{border-bottom: 1px solid #1f73b2;
+    padding-bottom: 5px;font-size:14px;}
+.width995noth{width: 99.5%;}
+.size15{font-size:15px;}
+.maxwidth50{width:50%;}
+.maxwidth50flex{width:50%;}
+.flex{display:flex;}
+.width233333333333{width:23.3333333333%;text-align:right;}
+.width233333333333left{width:23.3333333333%;text-align:left;}
+.width30{width:30%;text-align:left;}
+.textalignrightimportant{text-align:right !important;}
+.textalignleftimportant{text-align:left !important;}
+.borderbottomgrey{border-bottom: 1px solid #484a52;
+    padding-bottom: 10px;font-size:14px;}
+.updowncolor{font-size: 18px !important;
+    line-height: 8px;}
+.selectblack{
+       font-size: 11px;
+    line-height: 0;
+    background-size: 18px;
+    padding: 0;
+    background-color: #25262c;
+    border: 0;
+    color: #fff;
+    border: 0;
+    border-right: 1px #eb6e05 solid;
+    position: absolute;
+    left: 5px;
+    top: 8px;}
+	
+.rangecss{width:100%;padding:0;margin:0;}
+.scrolltoolbg{width:100%;background-color:#102331;height:5px;position:relative;margin-bottom:10px;margin-top:10px;}
+.price0{border-radius: 50%;
+    width: 7px;
+    background-color: #000000;
+    height: 7px;
+    border: 1px solid #eb6e05;
+    position: absolute;
+    top: -2px;}
+.price25{border-radius: 50%;
+    width: 7px;
+    background-color: #000000;
+    height: 7px;
+    border: 1px solid #eb6e05;
+    position: absolute;
+    top: -2px;
+	left:25%;}
+.price50{border-radius: 50%;
+    width: 7px;
+    background-color: #000000;
+    height: 7px;
+    border: 1px solid #eb6e05;
+    position: absolute;
+    top: -2px;
+	left:50%;}
+	.price75{border-radius: 50%;
+    width: 7px;
+    background-color: #000000;
+    height: 7px;
+    border: 1px solid #eb6e05;
+    position: absolute;
+    top: -2px;
+	left:75%;}
+.price100{border-radius: 50%;
+    width: 7px;
+    background-color: #000000;
+    height: 7px;
+    border: 1px solid #eb6e05;
+    position: absolute;
+    top: -2px;
+	left:97%;}
+.no-drop{cursor:no-drop;}
+.price0val{position: absolute;
+    top: -17px;
+    font-size: 10px;
+    color: #1f73b2;}
+	.price25val{position: absolute;
+    top: -17px;
+    font-size: 10px;
+    color:#1f73b2;
+	}
+
+
+	.price25val{position: absolute;
+    top: -17px;
+    font-size: 10px;
+    color: #6e6e6e;
+	left:25%;}
+	
+
+	.price50val{position: absolute;
+    top: -17px;
+    font-size: 10px;
+    color: #6e6e6e;
+	left:50%;}
+
+	.price75val{position: absolute;
+    top: -17px;
+    font-size: 10px;
+    color: #6e6e6e;
+	left:75%;}
+	
+	.price100val{position: absolute;
+    top: -17px;
+    font-size: 10px;
+    color: #6e6e6e;
+	left:92%;}
+.newuser{width:90%;margin:0 auto;background-color:#102331;padding:5px;font-size:12px;text-align:center;}
+.newuser a{color:#eb6e05;text-decoration:none;}
+.he397{height:368px;}
+.fontw{text-align:center;font-size:13px;}
+.fontc{text-align:center;font-size:11px;opacity:0.5;}
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.hiddensymbol{display:none;}
+.clear{clear:both;}
+	  
+</style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+<script>
+     
+
+			var ws = new WebSocket('ws://localhost:5678/');
+
+			ws.onmessage = function (event) {
+      
+			const trade = JSON.parse(event.data);
+			
+			if($("#selectSymbolSort").val()=="all"){
+			
+			}
+			if($("#selectSymbolSort").val()=="up"){
+				
+				trade.sort(function(a, b) {
+				  if (a.realprice == b.realprice) return 0;
+				  return a.realprice - b.realprice;
+				});
+				$("#pricelistok").val("0");
+				$("#baseOne").html("");
+				
+			}
+			if($("#selectSymbolSort").val()=="down"){
+				trade.sort(function(a, b) {
+				  if (b.realprice == a.realprice) return 0;
+				  return b.realprice - a.realprice;
+				});
+				$("#pricelistok").val("0");
+				$("#baseOne").html("");
+			
+			}
+			if($("#selectSymbolSort").val()=="PercentUp"){
+				trade.sort(function(a, b) {
+				  if (b.priceChangePercent == a.priceChangePercent) return 0;
+				  return b.priceChangePercent - a.priceChangePercent;
+				});
+				$("#pricelistok").val("0");
+				$("#baseOne").html("");
+			
+			}
+			
+			
+			$.each(trade, function(i, item) {
+				var itemCount = trade.length-1;
+				console.log(itemCount);
+				if($("#selectSymbol").val()==item.symbol){
+				 $("#selectSymbolName").html(item.symbol);
+				 $("#selectSymbolTitle").html(item.left_symbol_title+"/"+item.right_symbol_title);
+				 $("#selectSymbolLastPrice").html(item.realprice +" "+item.right_symbol);
+							if (item.priceChangePercent > 0) {
+							var changepriceDay="up";
+							var changepriceDayStr="%+";
+							$( "#selectSymbolLastPriceChange24" ).removeClass("down").addClass(changepriceDay);
+							}else{
+							var changepriceDay="down";
+							var changepriceDayStr="%";
+							$( "#selectSymbolLastPriceChange24" ).removeClass("up").addClass(changepriceDay);
+							}
+				 $("#selectSymbolLastPriceChange24").html(item.priceChange.slice(0,item.price_digit)+" ("+changepriceDayStr+""+item.priceChangePercent+")");
+				 
+				 $("#24s_high_price").html(item.Days_high_price +" "+item.right_symbol);
+				 $("#24s_low_price").html(item.Days_low_price +" "+item.right_symbol);
+				 $("#weightedAvgPrice").html(item.weightedAvgPrice.slice(0,item.price_digit) +" "+item.right_symbol);
+				 $("#selectSymbolLastPriceBestBuy").html((item.realprice-item.BuySelMarjin) +" "+item.right_symbol);
+				 $("#selectSymbolLastPriceBestSel").html(item.realprice +" "+item.right_symbol);
+				 
+				 
+				}
+				
+				if($("#pricelistok").val()=="0"){
+				if(i<=itemCount){
+				if ( $("#baseOne coinlisttop").attr('symbol') == item.symbol ) {
+					// do this
+				} else {
+							if (item.priceChangePercent > 0) {
+							var changepriceDay="up";
+							}else{
+							var changepriceDay="down";
+							}
+					$("#baseOne").append("<div class='coinlisttop' symbol='"+item.symbol+"' symbolfx='"+item.left_symbol+"/"+item.right_symbol+"'><div class='maxwidth42 fontsize12 symbolstyle'><i class='fa-solid fa-star'></i>"+item.left_symbol+"<span>/"+item.right_symbol+"</span></div><div class='maxwidth36 fontsize12 symbolstyle "+changepriceDay+"'>"+item.realprice+"</div><div class='maxwidth22 fontsize12 symbolstyle "+changepriceDay+"'>%"+item.priceChangePercent+"</div></div>");
+				
+				}
+				if(i==itemCount){
+					$("#pricelistok").val("1");
+				}
+				}else {
+				
+				}
+				}else{
+				$("#baseOne > .coinlisttop").each(function( index ) {
+						
+							if (item.priceChangePercent > 0) {
+							var changepriceDay="up";
+							}else{
+							var changepriceDay="down";
+							}
+						if($( this ).attr('symbol')==item.symbol){
+							$( this ).html("<div class='maxwidth42 fontsize12 symbolstyle'><i class='fa-solid fa-star'></i>"+item.left_symbol+"<span>/"+item.right_symbol+"</span></div><div class='maxwidth36 fontsize12 symbolstyle "+changepriceDay+"'>"+item.realprice+"</div><div class='maxwidth22 fontsize12 symbolstyle "+changepriceDay+"'>%"+item.priceChangePercent+"</div>");
+							
+						}
+				
+				});
+				
+				}
+				
+			});
+      };
+	  
+		
+		
+		
+    </script>
+<input type="hidden" id="pricelistok" name="pricelistok" value="0"/>
+<input type="hidden" id="selectSymbol" name="selectSymbol" value="BTCUSDT"/>
+<input type="hidden" id="selectSymbolSort" name="selectSymbolSort" value="all"/>
+<body class="trade">
+<div class="fwidth">
+	<div class="fleft">
+		<div class="fleft">
+			<div class="fleft"><SPAN style="color:#fff;">LOGO</SPAN></div>
+			<div class="fright textalignLeft pro"><span>PRO</span></div>
+			<div class="clear"></div>
+		</div>
+		<div class="fright">
+			<div class="fleft SELBUY">BASİT AL SAT</div>
+			<div class="fright SELBUY"><i class="fa-solid fa-trophy"></i> GELİŞMİŞ AL SAT</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="fright">
+		<ul class="usermenu">
+		<li><a href="#">Borsa</a></li>
+		<li><a href="#">Çüzdan</a></li>
+		<li><a href="#">Yatırma</a></li>
+		<li><a href="#">Çekme</a></li>
+		<li><a href="#">Destek</a></li>
+		<li><a href="#"><i class="fa-solid fa-sign-in"></i> Giriş</a></li>
+		<li><a href="#"><i class="fa-solid fa-user-plus"></i>Hesap Oluşturma</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div class="twidth">
+<ul class="coindetail">
+<li>
+<div class="width100 cointop"><span class="paddingleft5" id="selectSymbolName"></span></div>
+<div class="width100 cointoptext"><span class="paddingleft5" id="selectSymbolTitle"></span></div>
+</li>
+<li>
+<div class="width100 cointoptext textalignright">Son Fiyat</div>
+<div class="width100 cointop textalignright" id="selectSymbolLastPrice"></div>
+</li>
+<li>
+<div class="width100 cointoptext textalignright">En İyi Alış</div>
+<div class="width100 cointop textalignright" id="selectSymbolLastPriceBestBuy"></div>
+</li>
+<li>
+<div class="width100 cointoptext textalignright">En İyi Satış</div>
+<div class="width100 cointop textalignright" id="selectSymbolLastPriceBestSel"></div>
+</li>
+<li>
+<div class="width100 cointoptext textalignright">24s Değişim</div>
+<div class="width100 cointop textalignright" id="selectSymbolLastPriceChange24"></div>
+</li>
+<li>
+<div class="width100 cointoptext textalignright">24s En Yüksek</div>
+<div class="width100 cointop textalignright" id="24s_high_price"></div>
+</li>
+<li>
+<div class="width100 cointoptext textalignright">24s En Düşük</div>
+<div class="width100 cointop textalignright" id="24s_low_price"></div>
+</li>
+<li>
+<div class="width100 cointoptext textalignright">24s Ortalama</div>
+<div class="width100 cointop textalignright" id="weightedAvgPrice"></div>
+</li>
+<li>
+<div class="width100 cointoptext textalignright"><span class="paddingright5">24s BTC Hacim</span></div>
+<div class="width100 cointop textalignright"><span class="paddingright5">0</span></div>
+</li>
+</ul>
+<div class="clear"></div>
+</div>
+<div class="fwidthnotcolot">
+	<ul class="UIMaster">
+		<li class="width25">
+			<div class="fwidth width99 padding5px">
+			
+				<div class="centertools">
+				<input maxlength="200" spellcheck="false" class="searchBox" id="searchBox" type="text" placeholder="Arama">
+				<div class="favori" style="margin-left: 5px;
+    width: 6% !important;"><i class="fa-solid fa-star"></i></div>
+				</div>
+				
+				<div  class="cointype">
+				<div class="cointypelist">
+				<div id="TRYSORT" class="cointypelisttext">TRY</div>
+				<div id="USDTSORT" class="cointypelisttext">USDT</div>
+				<div id="BTCSORT" class="cointypelisttext">BTC</div>
+				<div id="ALLSORT" class="cointypelisttext aktif">Hepsi</div>
+				</div>
+				</div>
+				
+				<div  class="cointype">
+				<div class="cointypealt">
+				<div class="cointypealttext aktif">Tümü</div>
+				<div class="cointypealttext textalignCenter">Metaverse</div>
+				<div class="cointypealttext textalignCenter">Oyun</div>
+				<div class="cointypealttext textalignCenter">Web3</div>
+				<div class="cointypealttext textalignCenter">DeFi</div>
+				</div>
+				</div>
+				<div  class="cointype">
+				<div class="coinlisttop">
+					<div class="maxwidth42 fontsize12">İşlem Çifti <i class="fa-solid fa-refresh isize12px"></i></div>
+					<div class="maxwidth36 fontsize12">
+					Fiyat
+					<div class="" style="margin: 2px 0 0 5px;"><i class="fa-solid fa-caret-up iblock" id="symbolSortUp"></i> <i class="fa-solid fa-caret-down iblock" id="symbolSortDown"></i></div>
+					</div>
+					<div class="maxwidth22 fontsize12">
+					Değişim
+					<div class="" style="margin: 2px 0 0 5px;"><i class="fa-solid fa-caret-up iblock" id="symbolSortUpPercent"></i> <i class="fa-solid fa-caret-down iblock"></i></div>
+					</div>
+				</div>
+				</div>
+				
+				<div  class="cointype scrollbar scrollbar-custom" id="baseOne">
+			
+
+
+
+				
+				</div>
+				
+				
+				<div  class="cointype">
+				<div class="coinlisttop borderbottomblue">
+					Son İşlemler
+				</div>
+				</div>
+				<div  class="cointype">
+				<div class="coinlisttop">
+					<div class="maxwidth42 fontsize12">Zaman</div>
+					<div class="maxwidth36 fontsize12">
+					Miktar
+					</div>
+					<div class="maxwidth22 fontsize12">
+					Fiyat(TRY)
+					</div>
+				</div>
+				</div>
+				
+				<div  class="cointype scrollbar150 scrollbar-custom" id="">
+				<div class="coinlisttop">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:36:02</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.03658174</div>
+					<div class="maxwidth22 fontsize12 symbolstyle down">372,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle down">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle down">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle down">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle up">373,584</div>
+				</div>
+				<div class="coinlisttop margintop2px">
+					<div class="maxwidth42 fontsize12 symbolstyle">13:35:58</div>
+					<div class="maxwidth36 fontsize12 symbolstyle">0.13350723</div>
+					<div class="maxwidth22 fontsize12 symbolstyle down">373,584</div>
+				</div>
+				</div>
+				
+				
+			</div>
+		</li>
+		<li class="width50">
+			<div class="fwidth width995" id="baseChart">
+
+			</div>
+			
+			<div class="fwidth width995noth">
+				<div  class="cointype">
+				<div class="coinlisttop borderbottomblue">
+					<div class="maxwidth50 fontsize12 textalignLeft"><span class="aktif">Son İşlemler</span> | Derinlik Tablosu | Strateji | Haberler</div>
+					<div class="maxwidth50 fontsize12 textalignright">
+					Alış-Satış Farkı 392 TRY <i class="fa-solid fa-caret-down down size15 paddingleft5"></i>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+			<div class="fwidth width995noth">
+				
+				<!-- Load Page -->
+				<div  class="cointype">
+				<div class="coinlisttop">
+					<div class="maxwidth50flex fontsize12">
+					<div class="flex width995noth">
+					<div class="width233333333333left fontsize12b">Kümülatif</div>
+					<div class="width30 fontsize12b textalignrightimportant">Toplam (USDT)</div>
+					<div class="width233333333333 fontsize12b">Miktar</div>
+					<div class="width233333333333 fontsize12b paddingright5">Alış Fiyatı</div>
+					</div>
+					<div class="scrollbar147 scrollbar-custom width995noth" style="margin-top:9px;">
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b symbolstyle">0.5189</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignright">0.51624241</div>
+					<div class="width233333333333 fontsize12b up symbolstyle paddingright5 textalignright">17,460</div>
+					</div>
+					</div>
+					</div>
+					
+					<div class="maxwidth50flex fontsize12">
+					<div class="flex width995noth">
+
+					<div class="width233333333333left fontsize12b paddingleft5">Alış Fiyatı</div>
+					<div class="width233333333333 fontsize12b textalignleftimportant">Miktar</div>
+					<div class="width30 fontsize12b textalignrightimportant">Toplam (USDT)</div>
+					<div class="width233333333333 fontsize12b paddingright5">Kümülatif</div>
+					
+					</div>
+					
+					<div class="scrollbar147 scrollbar-custom width995noth" style="margin-top:9px;">
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					
+					<div class="flex">
+					<div class="width233333333333left fontsize12b down symbolstyle paddingleft5">0.5189</div>
+					<div class="width233333333333 fontsize12b symbolstyle textalignleftimportant">0.51624241</div>
+					<div class="width30 fontsize12b symbolstyle textalignrightimportant">9,012</div>
+					<div class="width233333333333 fontsize12b symbolstyle paddingright5">17,460</div>
+					</div>
+					</div>
+					
+					</div>
+				</div>
+				</div>
+				<!-- Load -->
+			
+			</div>
+			
+		</li>
+		<li class="width25" id="tradewraper">
+			<div class="fwidth he397" id="tradebox">
+				<div class="cointype">
+				<div class="coinlisttop borderbottomgrey">
+					<div class="fontsize12 textalignLeft"><span class="aktif">Piyasa</span> | Limit | Stop</div>
+				</div>
+				</div>
+				<div class="cointype">
+				<div class="cointypelist">
+				<div class="cointypelisttext up uphover">AL</div>
+				<div class="cointypelisttext downhover">SAT</div>
+				</div>
+				</div>
+					<div>
+					
+						<div class="centertools">
+						<div class="inputdiv"><span>0</span><div class="inputcaption">Toplam</div></div>
+						<div class="inputdivupdown"><span>USDT</span>
+						<div class="updownabsolite" style="margin: 2px 0 0 5px;"><i class="fa-solid fa-caret-up iblock updowncolor"></i> <i class="fa-solid fa-caret-down iblock updowncolor"></i></div>
+						</div>
+						</div>
+						
+						<div class="centertools">
+						<div class="inputdiv"><span>0</span><div class="inputcaption">Fiyat</div>
+						<i class="fa-solid fa-refresh isize12px absoluteleft5"></i>
+						</div>
+						<div class="inputdivupdown"><span>USDT</span>
+						<div class="updownabsolite" style="margin: 2px 0 0 5px;"><i class="fa-solid fa-caret-up iblock updowncolor"></i> <i class="fa-solid fa-caret-down iblock updowncolor"></i></div>
+						</div>
+						</div>
+						
+						
+						<div class="centertools">
+						<div class="inputdiv"><span>0</span><div class="inputcaption">Tetikleme Fiyatı</div>
+						<select class="selectblack">
+						  <option value="Limit">Limit</option>
+						  <option value="Piyasa">Piyasa</option>
+						</select>
+						</div>
+						<div class="inputdivupdown"><span>USDT</span>
+						<div class="updownabsolite" style="margin: 2px 0 0 5px;"><i class="fa-solid fa-caret-up iblock updowncolor"></i> <i class="fa-solid fa-caret-down iblock updowncolor"></i></div>
+						</div>
+						</div>
+						
+						<div class="centertools margintop2px">
+						<div class="scrolltoolbg no-drop">
+						<div class="price0"></div>
+						<div class="price0val">0%</div>
+						<div class="price25"></div>
+						<div class="price25val">25%</div>
+						<div class="price50"></div>
+						<div class="price50val">50%</div>
+						<div class="price75"></div>
+						<div class="price75val">75%</div>
+						<div class="price100"></div>
+						<div class="price100val">100%</div>
+						</div>
+						</div>
+						
+						<div class="centertools margintop2px">
+						<div class="newuser">BTC almak ve satmak için<br>
+<a href="">Üye Girişi</a> yapın veya <a href="">Yeni Üyelik</a> oluşturun.</div>
+						</div>
+					
+					
+					
+					
+					</div>
+			</div>
+			
+			<div class="fwidth" id="openorders" style="height:100%;">
+				<div class="cointype">
+				<div class="coinlisttop borderbottomblue">
+					Açık Emirler
+				</div>
+				</div>
+				
+				<div class="cointype">
+					<p class="fontw">Türk Lirası ile profesyonelce<br>
+kriptopara al sat.</p>
+					<p class="fontc">Güvenle kriptopara alıp satmak için ücretsiz<br> bir hesap oluşturun.</p>
+					<CENTER><a href="#" class="myButton">YENİ ÜYELİK</a></CENTER>
+				</div>
+				
+			</div>
+			
+		</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<script>
+window.addEventListener('resize', function(event){
+//412
+		//302
+		
+		var baseOne=window.innerHeight-438;
+		var baseChart=window.innerHeight-302;
+		var basetrade=window.innerHeight-92;
+		$("#baseOne").css("height",baseOne+"px");
+		$("#baseChart,#tradebox").css("height",baseChart+"px");
+		$("#tradewraper").animate({"height":basetrade+"px"}, {queue: false, duration: 200});
+		
+		
+		//alert(window.innerHeight);
+		//console.log(base);
+		
+});
+
+$("#searchBox").on("keyup change", function(e) {
+  // console.log($(this).val().toUpperCase());
+    $("#selectSymbolSort").val("all");
+	$("#baseOne > .coinlisttop").each(function() {
+		
+	
+		$(this).removeClass("hiddensymbol");
+		var str1 = $(this).attr('symbolfx');
+		var str2 = $("#searchBox").val().toUpperCase();
+		if(str1.indexOf(str2) != -1){
+		   //console.log($(this).attr('symbol'));
+		//$(this).removeClass("hiddensymbol").addClass("visiblesymbol");
+		}else{
+		$(this).removeClass("visiblesymbol").addClass("hiddensymbol");
+		}
+		
+		
+	});
+})
+
+
+changeFX("BTCUSDT");
+$("#baseOne").on('click', '.coinlisttop', function (e) {
+		  $( "#selectSymbol" ).val($(this).attr("symbol"));
+		  
+		changeFX($("#selectSymbol").val());
+		
+		});
+		
+function changeFX(fxsymbol){
+			new TradingView.widget(
+			  {
+			"autosize": true,
+			  "symbol": "'"+fxsymbol+"'",
+			  "interval": "D",
+			  "timezone": "Etc/UTC",
+			  "theme": "dark",
+			  "left_toolbar": true,
+			  "hide_side_toolbar": false,
+			  "allow_symbol_change": true,
+			  "hide_legend": false,
+			  "style": "1",
+			  "locale": "tr",
+			  "toolbar_bg": "#f1f3f6",
+			  "enable_publishing": false,
+			  "allow_symbol_change": true,
+			  "container_id": "baseChart"
+
+
+			})
+}
+
+$("#TRYSORT").click(function(e){
+	$("#selectSymbolSort").val("all");
+	$(this).addClass("aktif");
+	$("#USDTSORT").removeClass("aktif");
+	$("#BTCSORT").removeClass("aktif");
+	$("#ALLSORT").removeClass("aktif");
+	$("#baseOne > .coinlisttop").each(function() {
+		
+	
+		$(this).removeClass("hiddensymbol");
+		var str1 = $(this).attr('symbolfx');
+		var str2 = "/TRY";
+		if(str1.indexOf(str2) != -1){
+		   //console.log($(this).attr('symbol'));
+		//$(this).removeClass("hiddensymbol").addClass("visiblesymbol");
+		}else{
+		$(this).removeClass("visiblesymbol").addClass("hiddensymbol");
+		}
+		
+		
+	});
+});
+$("#USDTSORT").click(function(e){
+	$("#selectSymbolSort").val("all");
+	$(this).addClass("aktif");
+	$("#TRYSORT").removeClass("aktif");
+	$("#BTCSORT").removeClass("aktif");
+	$("#ALLSORT").removeClass("aktif");
+	$("#baseOne > .coinlisttop").each(function() {
+		
+	
+		$(this).removeClass("hiddensymbol");
+		var str1 = $(this).attr('symbolfx');
+		var str2 = "/USDT";
+		if(str1.indexOf(str2) != -1){
+		   //console.log($(this).attr('symbol'));
+		//$(this).removeClass("hiddensymbol").addClass("visiblesymbol");
+		}else{
+		$(this).removeClass("visiblesymbol").addClass("hiddensymbol");
+		}
+		
+		
+	});
+});
+$("#BTCSORT").click(function(e){
+	$("#selectSymbolSort").val("all");
+	$(this).addClass("aktif");
+	$("#TRYSORT").removeClass("aktif");
+	$("#USDTSORT").removeClass("aktif");
+	$("#ALLSORT").removeClass("aktif");
+	$("#baseOne > .coinlisttop").each(function() {
+		
+	
+		$(this).removeClass("hiddensymbol");
+		var str1 = $(this).attr('symbolfx');
+		var str2 = "/BTC";
+		if(str1.indexOf(str2) != -1){
+		   //console.log($(this).attr('symbol'));
+		//$(this).removeClass("hiddensymbol").addClass("visiblesymbol");
+		}else{
+		$(this).removeClass("visiblesymbol").addClass("hiddensymbol");
+		}
+		
+		
+	});
+});
+$("#ALLSORT").click(function(e){
+	$("#selectSymbolSort").val("all");
+	$(this).addClass("aktif");
+	$("#TRYSORT").removeClass("aktif");
+	$("#USDTSORT").removeClass("aktif");
+	$("#BTCSORT").removeClass("aktif");
+	$("#baseOne > .coinlisttop").each(function() {
+		
+	
+		$(this).removeClass("hiddensymbol");
+		var str1 = $(this).attr('symbolfx');
+		var str2 = "/";
+		if(str1.indexOf(str2) != -1){
+		   //console.log($(this).attr('symbol'));
+		//$(this).removeClass("hiddensymbol").addClass("visiblesymbol");
+		}else{
+		$(this).removeClass("visiblesymbol").addClass("hiddensymbol");
+		}
+		
+		
+	});
+});
+$("#symbolSortUp").click(function(e){
+$("#selectSymbolSort").val("up");
+$("#symbolSortUp").addClass("iblockAktif");
+$("#symbolSortDown").removeClass("iblockAktif");
+});
+$("#symbolSortDown").click(function(e){
+$("#selectSymbolSort").val("down");
+$("#symbolSortDown").addClass("iblockAktif");
+$("#symbolSortUp").removeClass("iblockAktif");
+});
+$("#symbolSortUpPercent").click(function(e){
+$("#selectSymbolSort").val("PercentUp");
+$("#symbolSortUpPercent").addClass("iblockAktif");
+
+$("#symbolSortUp").removeClass("iblockAktif");
+$("#symbolSortDown").removeClass("iblockAktif");
+});
+
+</script>
+</body>
+</html>
